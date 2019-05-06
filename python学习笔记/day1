@@ -1,0 +1,22 @@
+1.Python输出字体颜色
+   在输入时想要添加字体颜色，格式如下：
+   \033[1;31;40m      # 1是显示方式（可选），31是字体颜色，40m 是字体背景颜色；
+   \033[0m           # 恢复终端默认颜色，即取消颜色设置；
+   例如：
+   #!/usr/bin/env python
+    # -*- coding: utf-8 -*-
+    # 字体颜色
+    print "=====字体颜色======"
+    for i in range(31, 38):
+    print "\033[%s;40mHello world!\033[0m" %i
+    # 背景颜色
+    print "=====背景颜色======"
+    for i in range(41, 48):
+    print "\033[47;%smHello world!\033[0m" %i
+    # 显示方式
+    print "=====显示方式======"
+    for i in range(1, 9):
+    print "\033[%s;31;40mHello world!\033[0m" %i
+
+    在一些特殊情况输出可使用如下方式:
+     print("\033[1;31;0m",args[count2],"!=",args[count2+1],"!=",result[args[count2]],result[args[count2+1]],"\033[0m")

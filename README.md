@@ -1,5 +1,6 @@
 # python_study
 test_adb_1.py
+
 在GMS白名单申请时需要对系统属性做相关检测，规则如下：
 For 9
 ro.product.vendor.model = ro.product.model 
